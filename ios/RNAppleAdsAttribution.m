@@ -20,16 +20,16 @@ RCT_EXPORT_METHOD(getAttributionData:(RCTPromiseResolveBlock)resolve
       ADClientErrorLimitAdTracking = 1
     };
 
-    [[AdClient sharedClient] requestAttributionDetailsWithBlock: ^(NSDictionary *attributionDetails, NSError *error) {
+    [[ADClient sharedClient] requestAttributionDetailsWithBlock: ^(NSDictionary *attributionDetails, NSError *error) {
       if (!error) {
-        resolve([NSDictionary attributionDetails]);
+        resolve(attributionDetails);
         return;
       }
 
       // failed, so return empty
       resolve(@{});
       return;
-    }]
+    }];
 }
 
 @end
