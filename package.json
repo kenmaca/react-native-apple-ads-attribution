@@ -1,7 +1,7 @@
 
 {
   "name": "react-native-apple-ads-attribution",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Reads Apple Search Ads Attribution API in iOS",
   "main": "index.js",
   "repository": {
